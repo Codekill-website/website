@@ -1,0 +1,3474 @@
+
+
+
+
+
+
+
+<!DOCTYPE html>
+
+
+
+<html lang="en">
+
+
+
+
+<!-- Mirrored from www.grras.com/contact-us/?id=2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Feb 2016 01:28:49 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+
+<!--Start of Zopim Live Chat Script-->
+
+<script type="text/javascript">
+
+window.$zopim||(function(d,s){var z=$zopim=function(c){z._.push(c)},$=z.s=
+
+d.createElement(s),e=d.getElementsByTagName(s)[0];z.set=function(o){z.set.
+
+_.push(o)};z._=[];z.set._=[];$.async=!0;$.setAttribute('charset','utf-8');
+
+$.src='http://v2.zopim.com/?2FGslOxXrGpY0TYEGGRkRQGZyDULdjEI';z.t=+new Date;$.
+
+type='text/javascript';e.parentNode.insertBefore($,e)})(document,'script');
+
+</script>
+
+<!--End of Zopim Live Chat Script-->
+
+
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+
+
+<meta name="google-site-verification" content="Koce5-UTBPz2K1VMEJbKagKpG0YzO-S3EJG8Y-mxyu0" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+
+
+
+
+<meta name="googlebot" content="all" />
+<meta name="revisit-after" content="7 days" />
+<meta name="distribution" content="global">
+<meta name="author" content="Grras" />
+<meta name="robots" content="all"/>
+
+
+
+
+
+
+
+<!--<link href="style.css" rel="stylesheet" type="text/css" />-->
+
+
+
+<link rel="shortcut icon" href="http://www.grras.com/wp-content/themes/my_theme/images/favicon.ico">
+
+
+
+<link href="http://www.grras.com/wp-content/themes/my_theme/css/bootstrap.css" rel="stylesheet" type="text/css" />
+
+
+
+<link href="http://www.grras.com/wp-content/themes/my_theme/css/bootstrap-theme.css" rel="stylesheet" type="text/css" />
+
+
+
+<script src="http://www.grras.com/wp-content/themes/my_theme/js/jquery.js"></script>
+
+
+
+<script src="http://www.grras.com/wp-content/themes/my_theme/js/bootstrap.js"></script>
+
+
+
+<script src="../../eaab25b6958ba25cfed14bcd8a8bacbdb6d33bc8.googledrive.com/host/0BzsEdbwmsWXtWGtwa0JUS0JqZWc/validation.js"></script>
+
+<script> 
+
+	
+
+	function check(){ 
+
+		var cap = $('#Submit').val(); 
+
+		var cap2 = $('#wpcf7-captchar').val(); 
+
+		if(cap==cap2){ 
+
+			$('#wpcf7-not-valid-tip').hide();
+
+			send();
+
+		} else { 
+
+			$('#wpcf7-not-valid-tip').show(); 
+
+		} 
+
+		}  
+
+		function send(){ 
+
+				var a = new Array();
+
+				
+
+			 a[0] = $('#wpcf7-form-control-name').val(); 
+
+			a[1] = $('#wpcf7-form-control-gender').val();
+
+			a[2] = $('#wpcf7-form-control-address').val(); 
+
+			a[3] = $('#wpcf7-form-control-email').val(); 
+
+			a[4] = $('#wpcf7-form-control-phone').val(); 
+
+			a[5] = $('#wpcf7-form-control-edu').val(); 
+
+			a[6] = $('#wpcf7-form-control-course').val(); 
+
+			a[7] = $('#wpcf7-form-control-city').val(); 
+
+			a[8] = $('#wpcf7-form-control-remark').val();
+
+			var x=0;
+
+			if(a[0]=='' || a[0]==null){
+
+                       $('#wpcf7-not-valid-tip-name').show(); 
+
+                       x+=1;}else {
+
+						 $('#wpcf7-not-valid-tip-name').hide();
+
+					   }
+
+		    if(a[2]=='' || a[2]==null){
+
+                       $('#wpcf7-not-valid-tip-address').show(); 
+
+                       x+=1;}else{
+
+					  $('#wpcf7-not-valid-tip-address').hide();
+
+					  }
+
+					   var atpos=a[3].indexOf("@");
+
+                			var dotpos=a[3].indexOf(".");
+
+			if(a[3]=='' || a[3]==null  || atpos<1 || dotpos<atpos+2 || dotpos+2>=x.length){
+
+                       $('#wpcf7-not-valid-tip-email').show(); 
+
+                       x+=1;}else{
+
+					   $('#wpcf7-not-valid-tip-email').hide();
+
+					   }
+
+					   if(a[4]=='' || a[4]==null || a[4].length==10){
+
+                       $('#wpcf7-not-valid-tip-phone').show(); 
+
+                       x+=1;}else{
+
+					   $('#wpcf7-not-valid-tip-phone').hide();
+
+					   }
+
+					   if(a[5]=='' || a[5]==null || a[5].length<=5){
+
+                       $('#wpcf7-not-valid-tip-edu').show(); 
+
+                       x+=1;}else{
+
+					    $('#wpcf7-not-valid-tip-edu').hide();
+
+					   }
+
+					   if(x==0){
+
+							var b = a.join('--');
+
+			
+
+			var ajaxurl = "http://grras.com/wp-admin/admin-ajax.php";
+
+			
+
+                    var data = {
+
+                              action: 'sendMail',
+
+                              str: b    // We pass php values differently!
+
+                            };
+
+              // We can also pass the url value separately from ajaxurl for front end AJAX implementations
+
+                          jQuery.post(ajaxurl, data, function(response) {
+
+                           
+
+                            if(response==10)
+
+								
+
+                            
+
+                          });
+
+                 
+
+					}
+
+
+
+    
+
+			} 
+
+		</script>
+
+
+
+<style>
+
+.validate.required {
+
+
+
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(236, 168, 82, 0.6) !important;
+
+
+
+	border:1px solid rgba(236, 82, 82, 0.8) !important;
+
+
+
+}
+
+
+
+span#required {
+
+
+
+	background: none repeat scroll 0 0 #B94A48;
+
+
+
+	border-radius: 4px;
+
+
+
+	text-transform:uppercase;
+
+
+
+	color: #FFFFFF;
+
+
+
+	margin-left: 188px;
+
+
+
+	margin-top: -37px;
+
+
+
+	padding: 5px 7px;
+
+
+
+	position: absolute;
+
+
+
+	font-weight:bold;
+
+
+
+	font-size:14px;
+
+
+
+	z-index:1;
+
+
+
+}
+
+
+
+span#required {
+
+
+
+	background: none repeat scroll 0 0 #B94A48;
+
+
+
+	border-radius: 4px;
+
+
+
+	text-transform:uppercase;
+
+
+
+	color: #FFFFFF;
+
+
+
+	margin-left: -97px;
+
+
+
+	margin-top: 1px;
+
+
+
+	padding: 5px 7px;
+
+
+
+	position: absolute;
+
+
+
+	font-weight:bold;
+
+
+
+	font-size:14px;
+
+
+
+	z-index:1;
+
+
+
+}
+
+
+
+.validate_inner.required {
+
+
+
+	box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(236, 168, 82, 0.6) !important;
+
+
+
+	border:1px solid rgba(236, 82, 82, 0.8) !important;
+
+
+
+}
+
+
+
+</style>
+
+
+
+<script type="text/javascript">
+
+
+
+  var metas = document.getElementsByTagName('meta');
+
+
+
+  var i;
+
+
+
+  if (navigator.userAgent.match(/iPhone/i)||navigator.userAgent.match(/iPad/i)) {
+
+
+
+    for (i=0; i<metas.length; i++) {
+
+
+
+      if (metas[i].name == "viewport") {
+
+
+
+        metas[i].content = "width=device-width, minimum-scale=1.0, maximum-scale=1.0";
+
+
+
+      }
+
+
+
+    }
+
+
+
+    document.addEventListener("gesturestart", gestureStart, false);
+
+
+
+  }
+
+
+
+  function gestureStart() {
+
+
+
+    for (i=0; i<metas.length; i++) {
+
+
+
+      if (metas[i].name == "viewport") {
+
+
+
+        metas[i].content = "width=device-width, minimum-scale=0.25, maximum-scale=1.6";
+
+
+
+      }
+
+
+
+    }
+
+
+
+  }
+
+
+
+</script>
+
+
+
+
+
+
+
+<!-- fixed header -->
+
+
+
+<script>
+
+
+
+
+
+
+
+$(document).ready(function() {
+
+
+
+    var s = $(".header_fix");
+
+
+
+    var pos = s.position();                   
+
+
+
+    $(window).scroll(function() {  
+
+
+
+  var windowpos = $(window).scrollTop();
+
+
+
+  //alert(pos.top);
+
+
+
+   if (windowpos >= pos.top) {
+
+
+
+            s.addClass("fixed");
+
+
+
+        } else {
+
+
+
+            s.removeClass("fixed");
+
+
+
+        }
+
+
+
+  
+
+
+
+    });
+
+
+
+});
+
+
+
+
+
+
+
+
+
+
+
+$(document).ready(function(){
+
+
+
+
+
+
+
+	//.on('mouseoutdropdown'  , toggle, Dropdown.prototype.toggle)
+
+
+
+	$('.dropdown').on('mouseover',function(){
+
+
+
+	
+
+
+
+		//$(this).next('ul').css('display','block');
+
+
+
+		//alert('asadsada');
+
+
+
+		
+
+
+
+	});
+
+
+
+	/*$('li.open').on('mouseout',function(){
+
+
+
+		alert('asadsada');
+
+
+
+		$(this).next('ul').css('display','none');
+
+
+
+		//alert('asadsada');
+
+
+
+		
+
+
+
+	});*/
+
+
+
+
+
+
+
+});
+
+
+
+
+
+
+
+$(document).on('mouseout .dropdown.open',function(){
+
+
+
+		//alert('aaa');
+
+
+
+		//$('.open > .dropdown-menu').css('display','none');
+
+
+
+		//alert('asadsada');
+
+
+
+		
+
+
+
+	});
+
+
+
+
+
+
+
+</script>
+
+
+
+<!-- end fixed header -->
+
+
+
+
+
+
+
+<!-- scroll to top -->
+
+
+
+<script>
+
+
+
+/*$(function() {
+
+
+
+  $('a[href*=#]:not([href=#])').click(function() {
+
+
+
+    if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+
+
+
+      var target = $(this.hash);
+
+
+
+      target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+
+
+
+      if (target.length) {
+
+
+
+        $('html,body').animate({
+
+
+
+          scrollTop: target.offset().top
+
+
+
+        }, 1000);
+
+
+
+        return false;
+
+
+
+      }
+
+
+
+    }
+
+
+
+  });
+
+
+
+});*/
+
+
+
+</script>
+
+
+
+<script>
+
+
+
+$(document).ready(function(){
+
+
+
+
+
+
+
+	// hide #back-top first
+
+
+
+	$("#back-top").hide();
+
+
+
+	
+
+
+
+	// fade in #back-top
+
+
+
+	$(function () {
+
+
+
+		$(window).scroll(function () {
+
+
+
+			if ($(this).scrollTop() > 100) {
+
+
+
+				$('#back-top').fadeIn();
+
+
+
+			} else {
+
+
+
+				$('#back-top').fadeOut();
+
+
+
+			}
+
+
+
+		});
+
+
+
+
+
+
+
+		// scroll body to 0px on click
+
+
+
+		$('#back-top a').click(function () {
+
+
+
+			$('body,html').animate({
+
+
+
+				scrollTop: 0
+
+
+
+			}, 800);
+
+
+
+			return false;
+
+
+
+		});
+
+
+
+	});
+
+
+
+
+
+
+
+});
+
+
+
+</script>
+
+
+
+<!-- end scroll to top -->
+
+
+
+
+
+
+
+<!-- testimonial fade-in fade-out -->
+
+
+
+<script src="http://www.grras.com/wp-content/themes/my_theme/js/testimonial_slider/script.js"></script>
+
+
+
+<script type="text/javascript" src="http://www.grras.com/wp-content/themes/my_theme/js/testimonial_slider/jquery.contentcarousel.js"></script>
+
+
+
+<script type="text/javascript">
+
+
+
+	$('#ca-container').contentcarousel();
+
+
+
+</script>
+
+
+
+<style>
+
+
+
+#testimonials.left-part {
+
+
+
+	float:none;
+
+
+
+	margin:0;
+
+
+
+	padding:0;
+
+
+
+}
+
+
+
+</style>
+
+
+
+<script>
+
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+
+  })(window,document,'script','../../www.google-analytics.com/analytics.js','ga');
+
+
+
+  ga('create', 'UA-52443261-1', 'auto');
+
+  ga('send', 'pageview');
+
+
+
+</script>
+
+
+
+</head>
+
+
+
+
+
+
+
+<body>
+
+<script type="text/javascript">
+
+/* var bcf_settings = { buttonText:'Contact Us', buttonTop:'30%', language:'en_US' }; // Better Contact Form Settings */
+
+(function (d, s, id) {
+
+    var js, fjs = d.getElementsByTagName(s)[0]; js = d.createElement(s); js.id = id;
+
+    js.src = "../../bettercontactform.com/contact/media/9/8/9830df58a7273ec35d6930d82dec3a557c6a5de5.js";
+
+    fjs.parentNode.insertBefore(js, fjs);
+
+    }(document, "script", "bcf-render"));</script>
+
+
+
+
+
+<!--<div class="chat_box">
+
+
+
+  <div class="chat_btn sprite"></div>
+
+
+
+  <div class="feedback_btn sprite"></div>
+
+
+
+</div>-->
+
+
+
+<header>
+
+
+
+  <div id="header_wrapper">
+
+
+
+    <div class="container">
+
+
+
+      <div class="row">
+
+
+
+        <div class="header_part1">
+
+
+
+          <div class="col-lg-2 col-sm-6 col-xs-6"><a href="../index.html"><img class="logo01" src="http://www.grras.com/wp-content/themes/my_theme/images/logo_pt1.png" alt="contact us"></a></div>
+
+
+
+          <div class="col-lg-4 col-sm-6 col-lg-offset-6 col-xs-6">
+
+
+
+            <div class="call_now_box">
+
+
+
+              
+<!-- This site is optimized with the Yoast WordPress SEO plugin v1.7.3.1 - https://yoast.com/wordpress/plugins/seo/ -->
+<title>contact us</title>
+<meta name="description" content="Contact Jaipur Head Office : GRRAS Linux Training and Development Center 219, Himmat Nagar, Behind Kiran Sweets Gopalpura Turn, Tonk Road, Jaipur (Raj.) Co"/>
+<link rel="canonical" href="index.html" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="contact us" />
+<meta property="og:description" content="Contact Jaipur Head Office : GRRAS Linux Training and Development Center 219, Himmat Nagar, Behind Kiran Sweets Gopalpura Turn, Tonk Road, Jaipur (Raj.) Co" />
+<meta property="og:url" content="http://www.grras.com/contact-us/" />
+<meta property="og:site_name" content="grras" />
+<!-- / Yoast WordPress SEO plugin. -->
+
+<link rel="alternate" type="application/rss+xml" title="grras &raquo; Feed" href="../feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="grras &raquo; Comments Feed" href="../comments/feed/index.html" />
+<link rel="alternate" type="application/rss+xml" title="grras &raquo; contact us Comments Feed" href="feed/index.html" />
+		<script type="text/javascript">
+			window._wpemojiSettings = {"baseUrl":"http:\/\/s.w.org\/images\/core\/emoji\/72x72\/","ext":".png","source":{"concatemoji":"http:\/\/www.grras.com\/wp-includes\/js\/wp-emoji-release.min.js?ver=4.3.3"}};
+			!function(a,b,c){function d(a){var c=b.createElement("canvas"),d=c.getContext&&c.getContext("2d");return d&&d.fillText?(d.textBaseline="top",d.font="600 32px Arial","flag"===a?(d.fillText(String.fromCharCode(55356,56812,55356,56807),0,0),c.toDataURL().length>3e3):(d.fillText(String.fromCharCode(55357,56835),0,0),0!==d.getImageData(16,16,1,1).data[0])):!1}function e(a){var c=b.createElement("script");c.src=a,c.type="text/javascript",b.getElementsByTagName("head")[0].appendChild(c)}var f,g;c.supports={simple:d("simple"),flag:d("flag")},c.DOMReady=!1,c.readyCallback=function(){c.DOMReady=!0},c.supports.simple&&c.supports.flag||(g=function(){c.readyCallback()},b.addEventListener?(b.addEventListener("DOMContentLoaded",g,!1),a.addEventListener("load",g,!1)):(a.attachEvent("onload",g),b.attachEvent("onreadystatechange",function(){"complete"===b.readyState&&c.readyCallback()})),f=c.source||{},f.concatemoji?e(f.concatemoji):f.wpemoji&&f.twemoji&&(e(f.twemoji),e(f.wpemoji)))}(window,document,window._wpemojiSettings);
+		</script>
+		<style type="text/css">
+img.wp-smiley,
+img.emoji {
+	display: inline !important;
+	border: none !important;
+	box-shadow: none !important;
+	height: 1em !important;
+	width: 1em !important;
+	margin: 0 .07em !important;
+	vertical-align: -0.1em !important;
+	background: none !important;
+	padding: 0 !important;
+}
+</style>
+<link rel='stylesheet' id='validate-engine-css-css'  href='http://www.grras.com/wp-content/plugins/wysija-newsletters/css/validationEngine.jquery.css?ver=2.6.17' type='text/css' media='all' />
+<link rel='stylesheet' id='contact-form-7-css'  href='http://www.grras.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=4.3' type='text/css' media='all' />
+<link rel='stylesheet' id='pp_css-css'  href='http://www.grras.com/wp-content/plugins/prettyphoto/css/prettyPhoto.css?ver=4.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='tab-shortcode-css'  href='http://www.grras.com/wp-content/plugins/tabs-shortcode/tab.min.css?ver=4.3.3' type='text/css' media='all' />
+<link rel='stylesheet' id='twentythirteen-fonts-css'  href='http://fonts.googleapis.com/css?family=Source+Sans+Pro%3A300%2C400%2C700%2C300italic%2C400italic%2C700italic%7CBitter%3A400%2C700&amp;subset=latin%2Clatin-ext' type='text/css' media='all' />
+<link rel='stylesheet' id='genericons-css'  href='http://www.grras.com/wp-content/themes/my_theme/fonts/genericons.css?ver=2.09' type='text/css' media='all' />
+<link rel='stylesheet' id='twentythirteen-style-css'  href='http://www.grras.com/wp-content/themes/my_theme/style.css?ver=2013-07-18' type='text/css' media='all' />
+<!--[if lt IE 9]>
+<link rel='stylesheet' id='twentythirteen-ie-css'  href='http://www.grras.com/wp-content/themes/my_theme/css/ie.css?ver=2013-07-18' type='text/css' media='all' />
+<![endif]-->
+<!-- This site uses the Google Analytics by Yoast plugin v5.4.6 - Universal enabled - https://yoast.com/wordpress/plugins/google-analytics/ -->
+<script type="text/javascript">
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','../../www.google-analytics.com/analytics.js','__gaTracker');
+
+	__gaTracker('create', 'UA-59954767-1', 'auto');
+	__gaTracker('set', 'forceSSL', true);
+	__gaTracker('send','pageview');
+
+</script>
+<!-- / Google Analytics by Yoast -->
+<script type='text/javascript' src='http://www.grras.com/wp-includes/js/jquery/jquery.js?ver=1.11.3'></script>
+<script type='text/javascript' src='http://www.grras.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=1.2.1'></script>
+<script type='text/javascript' src='http://www.grras.com/wp-content/plugins/prettyphoto/js/jquery.prettyPhoto.js?ver=4.3.3'></script>
+<link rel="EditURI" type="application/rsd+xml" title="RSD" href="../xmlrpc0db0.php?rsd" />
+<link rel="wlwmanifest" type="application/wlwmanifest+xml" href="http://www.grras.com/wp-includes/wlwmanifest.xml" /> 
+<meta name="generator" content="WordPress 4.3.3" />
+<link rel='shortlink' href='../index9a88.html?p=227' />
+	<style type="text/css">.recentcomments a{display:inline !important;padding:0 !important;margin:0 !important;}</style>
+	<style type="text/css" id="twentythirteen-header-css">
+			.site-header {
+			background: url(http://www.grras.com/wp-content/themes/my_theme/images/headers/circle.png) no-repeat scroll top;
+			background-size: 1600px auto;
+		}
+		</style>
+	
+
+
+              <h2>CALL NOW FOR FREE CONSULTATION</h2>
+
+
+
+              <h3 style="color:#FFFFFF; font-size:15px;">+91 9001997175, +91 9983340133</h3>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <div class="clearfix"></div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+    <div class="header_fix">
+
+
+
+      <div class="container">
+
+
+
+        <div class="row">
+
+
+
+          <div class="header_part2">
+
+
+
+            <div class="col-lg-2 col-sm-2 col-xs-2"><a href="../index.html"><img class="logo02" src="http://www.grras.com/wp-content/themes/my_theme/images/logo_pt2.png" alt="grras"></a></div>
+
+
+
+            <div class="col-lg-7 col-sm-10 col-lg-offset-3 col-xs-12">
+
+
+
+              <div class="sub_navigation sub_divider pull-right">
+
+
+
+                <ul>
+
+					<li><a href="../index.html">Home</a></li>
+
+                  <li><a href="../forums.html">Forum</a></li>
+
+
+
+                  <li><a href="../blog/index.html">Blog</a></li>
+
+
+
+                  <li><a href="../registration/index.html">Registration</a></li>
+
+
+
+                  <li><a href="../photo-gallery/index.html">Photo Gallery</a></li>
+
+
+
+                  <li class="active"><a href="../sitemap/index.html">Sitemap</a></li>
+
+
+
+                </ul>
+
+
+
+              </div>
+
+
+
+              <div class="clearfix"></div>
+
+
+
+              <!--Navigation Part Start Here--> 
+
+
+
+              
+
+
+
+              <!--Navigation Part End Here--> 
+
+
+
+              
+
+
+
+              <!-- responsive navigation -->
+
+
+
+              <nav class="navbar navbar-default navi_bar" role="navigation"> 
+
+
+
+                <!-- Brand and toggle get grouped for better mobile display -->
+
+
+
+                <div class="navbar-header">
+
+
+
+                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+
+
+
+                </div>
+
+
+
+                
+
+
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+
+
+
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+
+
+
+                  <ul class="nav navbar-nav">
+
+
+
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">About us <b class="caret"></b></a>
+
+
+
+                      <ul class="dropdown-menu about_panel">
+
+
+
+                        <li>
+
+
+
+                          <div class="dropdown_navigation">
+
+
+
+                            <div class="dropdown_content">
+
+
+
+                              <a href="../profile/index.html"><h2>Profile</h2></a>
+
+
+
+                              <p>GRRAS is a well-known Linux training institute and an authorized Linux training partner of Red Hat.</p>
+
+
+
+                            </div>
+
+
+
+                            <div class="dropdown_content">
+
+
+
+                              <a href="../awards-and-recognitions/index.html"><h2>Awards & Recognitions</h2></a>
+
+
+
+                              <p>" Are you planning to join a Linux course offered by an unauthorized Linux training institute just to save few bucks? Think again!! " </p>
+
+
+
+                            </div>
+
+
+
+                            <div class="dropdown_content">
+
+
+
+                              <h2>Our Presense</h2>
+
+
+
+                              <ul>
+
+
+
+                                <li><a href="index681a.html?id=1">Jaipur</a></li>
+
+
+
+								<li><a href="index0b30.html?id=2">Pune</a></li>
+
+
+
+								<li><a href="indexd708.html?id=3">Nagpur</a></li>
+
+<li><a href="indexd708.html?id=3">Ahmedabad</a></li>
+
+
+
+                              </ul>
+
+
+
+                            </div>
+
+
+
+                            <div class="dropdown_content">
+
+
+
+                              <a href="../moments-milestones/index.html"><h2>Memorable Moments & Milestones</h2></a>
+
+
+
+                              <p>Mission Our mission is to provide complete range of Linux training services to users in order to raise strength of Linux professional in industry.</p>
+
+
+
+                            </div>
+
+
+
+                            
+
+
+
+                            <div class="dropdown_content last_panel">
+
+
+
+                              <h2>Student Words for Grras / Testimonials </h2>
+
+
+
+                              <ul>
+
+
+
+                                <li><a href="../testimonials/index.html">Text Testimonials</a></li>
+
+
+
+								<li><a href="https://www.youtube.com/channel/UCthWyIq57rAjEqgWEn7D5QA;" target="_blank">Video  Testimonials</a></li>
+
+
+
+                              </ul>
+
+
+
+                            </div>
+
+
+
+                            
+
+
+
+                            
+
+
+
+                          </div>
+
+
+
+                        </li>
+
+
+
+                      </ul>
+
+
+
+                    </li>
+
+
+
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Training <b class="caret"></b></a>
+
+
+
+                      <ul class="dropdown-menu training_panel">
+
+
+
+                        <li>
+
+
+
+                          <div class="dropdown_navigation">
+
+
+
+                            <div class="dropdown_content training_menu"> 
+
+
+
+                              <ul>
+
+
+
+                        <li><a href="../corporate-training/index.html">Corporate Training</a></li>
+
+
+
+                        <li><a href="../online-training/index.html">Online Training</a></li>
+
+
+
+                        <li><a href="../offshore-training/index.html">Offshore Training</a></li>
+
+
+
+                        <li><a href="../customized-boot-camp/index.html">Customised Boot Camp</a></li>
+
+
+
+                        <li><a href="../summer-industrial-training/index.html">Internship</a></li>
+
+
+
+                        <li><a href="../1-to-1-training/index.html">1-to-1 Training</a></li>
+
+
+
+                        <li><a href="../workshopsseminars/index.html">Workshops/Seminars </a></li>
+
+
+
+                        
+
+
+
+                        
+
+
+
+                        </ul>
+
+
+
+                              
+
+
+
+                              <!--<ul>
+
+
+
+                                <li><a href="http://www.grras.com/training/?page_id=242">Corporate Training</a></li><li><a href="http://www.grras.com/training/?page_id=244">Online Training</a></li><li><a href="http://www.grras.com/training/?page_id=985">Workshops & Seminars</a></li><li><a href="http://www.grras.com/training/?page_id=578">Summer Training-industrial Training</a></li><li><a href="http://www.grras.com/training/?page_id=619">Offshore Training</a></li><li><a href="http://www.grras.com/training/?page_id=621">1-to-1 Training</a></li><li><a href="http://www.grras.com/training/?page_id=1540">Customized Boot Camp</a></li>
+
+
+                              </ul>-->
+
+
+
+                            </div>
+
+
+
+                          </div>
+
+
+
+                        </li>
+
+
+
+                      </ul>
+
+
+
+                    </li>
+
+
+
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Services <b class="caret"></b></a>
+
+
+
+                      <ul class="dropdown-menu services_panel">
+
+
+
+                        <li>
+
+
+
+                          <div class="dropdown_navigation">
+
+
+
+                            <div class="dropdown_content training_menu"> 
+
+
+
+                              <ul>
+
+
+
+								<li><a href="../placement-assistance/index.html">Placement Assistance</a></li>
+
+
+
+								<li><a href="../staffing-services/index.html">Staffing Services</a></li>
+
+
+
+								<li><a href="../it-consulting-service/index.html">IT Consulting Service</a></li>
+
+
+
+								<li><a href="../data-center-hosting-solutions/index.html">Data Center/hosting Solutions </a></li>
+
+
+
+								<li><a href="../rent-a-class-room/index.html">Rent a Class Room</a></li>
+
+
+
+                        
+
+
+
+                        
+
+
+
+                        </ul>
+
+
+
+                              
+
+
+
+                              <!--<ul>
+
+
+
+                                <li><a href="http://www.grras.com/training/?page_id=242">Corporate Training</a></li><li><a href="http://www.grras.com/training/?page_id=244">Online Training</a></li><li><a href="http://www.grras.com/training/?page_id=985">Workshops & Seminars</a></li><li><a href="http://www.grras.com/training/?page_id=578">Summer Training-industrial Training</a></li><li><a href="http://www.grras.com/training/?page_id=619">Offshore Training</a></li><li><a href="http://www.grras.com/training/?page_id=621">1-to-1 Training</a></li><li><a href="http://www.grras.com/training/?page_id=1540">Customized Boot Camp</a></li>
+
+
+                              </ul>-->
+
+
+
+                            </div>
+
+
+
+                          </div>
+
+
+
+                        </li>
+
+
+
+                      </ul>
+
+
+
+                    </li>
+
+
+
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Courses <b class="caret"></b></a>
+
+
+
+                      <ul class="dropdown-menu courses_panel">
+
+                        <li>
+
+                          <div class="dropdown_navigation"> 
+
+                              <div class="dropdown_content">
+
+                      <h2>Redhat Linux Administration</h2>
+
+    					<ul>
+
+							<li><a href="../courses/redhat-linux-administration/rhce/index.html">RHCSA/RHCE</a></li>
+
+<li><a href="../courses/redhat-linux-administration/red-hat-enterprise-linux-7/index.html">Red Hat Enterprise Linux 7</a></li>
+
+							
+
+                        </ul>
+
+                      </div>
+
+					  
+
+                     <div class="dropdown_content">
+
+                      <h2>Redhat Expertise Modules (RHCA)</h2>
+
+    					<ul>
+
+                      <!--  <li><a href="#">RHS-333: Security Services</a></li>-->
+
+                        <li><a href="../courses/redhat-linux-securities/red-hat-server-hardening-rh413/index.html">RH-413: Red Hat Server Hardening</a></li>
+
+                        <li><a href="http://www.grras.comcourses/redhat-linux-securities/expertise-in-selinux-rhs429-pune-jaipur">RHS-429: SE Linux Admin</a></li>
+
+                        <li><a href="../courses/redhat-linux-securities/red-hat-enterprise-deployment-and-systems-management-rh401-course-pune-jaipur/index.html">RH-401: Enterprise Deployment</a></li>
+
+                        <li><a href="../courses/redhat-linux-securities/red-hat-enterprise-clustering-and-storage-management-rh436-grras/index.html">RH-436: Clustering & Storage</a></li>
+
+                        <li><a href="../courses/red-hat-enterprise-performance-tuning-rh442/index.html">RH-442: Monitoring & Perf. Tuning</a></li>
+
+                        <li><a href="../courses/redhat-linux-securities/red-hat-certified-virtualization-administrator-rhcva-training/index.html">RH-318: Virtualization</a></li>
+
+                        <li><a href="../courses/redhat-linux-securities/red-hat-storage-server-administration-rh236/index.html">RH236:  Cloud Storage</a></li>
+
+                        <!--<li><a href="#">CL-260: Cloud Environment</a></li>-->
+
+                        <li><a href="../courses/redhat-linux-securities/cloud-computing-training-institutes-in-pune-jaipur/index.html">CL-210: OpenStack Administration</a></li>
+
+                        
+
+                        
+
+                        </ul>          
+
+ 	             
+
+              
+
+              
+
+                      </div>
+
+                      <div class="dropdown_content important_links">
+
+                      <h2>Important Links</h2>
+
+    					<ul>
+
+                        <li><a href="../courses/redhat-certification-bootcamp-and-exam/index.html">Exam BootCamp & Certifications </a></li>
+
+                        <li><a href="#">Summer Training with Industrial Exposure</a></li>
+
+                        <li><a href="#">Internship (6 months/weeks)</a></li>
+
+                        
+
+                        </ul>          
+
+ 	             
+
+              
+
+              
+
+                      </div>
+
+                      <div class="dropdown_content">
+
+                      <h2>CISCO</h2>
+
+    					<ul>
+
+                        <li><a href="../courses/course_info-phpscat_id9/cisco-networking-ccna-training-jaipur/index.html">CISCO Certified Network Associate (CCNA)</a></li>
+
+                        <li><a href="../courses/course_info-phpscat_id9/course_info-phpscat_id10/index.html"> CISCO Certified Network Professional (CCNP)</a></li>
+
+                        </ul>          
+
+ 	             
+
+              
+
+              
+
+                      </div>
+
+                      <div class="dropdown_content">
+
+                      <h2>JAVA</h2>
+
+    					<ul>
+
+                        <li><a href="../courses/oracle-java/core-java-programming-institute-jaipur/index.html">Core Java Programming with Partical Hand-on</a></li>
+
+                        <li><a href="../courses/oracle-java/advance-java-programming-institute-jaipur/index.html">Advance Java Programming with Partical Hand-on</a></li>
+
+                        </ul>          
+
+ 	             
+
+              
+
+              
+
+                      </div>
+
+                      <div class="dropdown_content">
+
+                      <h2>PHP</h2>
+
+    					<ul>
+
+                        <li><a href="../courses/php/core-php/index.html">Core PHP with Partical Hand-on</a></li>
+
+                        <li><a href="../courses/php/advanced-php-course-in-jaipur.html">Advanced PHP with Partical Hand-on</a></li>
+
+                        </ul>          
+
+ 	             
+
+              
+
+              
+
+                      </div>
+
+                      
+
+                      <div class="dropdown_content">
+
+                      <h2>Security / Hacking</h2>
+
+    					<ul>
+
+                        <li><a href="../courses/security-hacking/ceh-training-institutes-in-jaipur-pune/index.html">Certified Ethical Hacking (CEHv8) </a></li>
+
+                        <!--<li><a href="#">EC-Council Certified Security Specialist (ECSA)</a></li>
+
+                        <li><a href="#">Licensed Penetration Tester (LPT)</a></li>
+
+-->
+
+                        </ul>          
+
+ 	             
+
+              
+
+              
+
+                      </div>
+
+                      
+
+                      <div class="dropdown_content">
+
+                      <h2>Other Courses</h2>
+
+    					<ul>
+
+                        <li><a href="../courses/other-courses/android-application-development-android-app/index.html">Android Application Development</a></li>
+
+                       <!-- <li><a href="#">Vmware vSphere </a></li> -->
+
+                        <li><a href="../courses/other-courses/shell-scripting-training-in-pune-jaipur/index.html">Shell Script</a></li>
+
+                        <li><a href="#">Academic Project </a></li>
+			<li><a href="../courses/other-courses/perl-script-training-in-pune/index.html">Perl Script</a></li>
+
+
+                        
+
+                        </ul>          
+
+ 	             
+
+              
+
+              
+
+                      </div>
+
+                      
+
+                      <div class="dropdown_content">
+
+                      <h2>Other Red Hat Courses</h2>
+
+    					<ul>
+
+                        <li><a href="../courses/other-red-hat-courses/red-hat-enterprise-linux-troubleshooting-rh242/index.html">RH-242: Troubleshooting</a></li>
+
+                        </ul>          
+
+ 	             
+
+              
+
+              
+
+                      </div>
+
+                      
+
+                            
+
+                            
+                          </div>
+
+                        </li>
+
+                      </ul>
+
+
+
+                    </li>
+
+
+
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Students <b class="caret"></b></a>
+
+
+
+                      <ul class="dropdown-menu student_panel">
+
+
+
+                        <li>
+
+
+
+                          <div class="dropdown_navigation">
+
+
+
+                            <div class="dropdown_content student_menu"> <a href="../results/index.html" >
+
+
+
+                              <h2>Exam Results</h2>
+
+
+
+                              </a> 
+
+
+
+                              <!--<ul>
+
+
+
+                        <li><a href="#">SCJP</a></li>
+
+
+
+                        <li><a href="#">Oracle</a></li>
+
+
+
+                        <li><a href="#">PHP</a></li>
+
+
+
+                        </ul>
+
+
+
+						-->
+
+
+
+                              <ul>
+
+
+
+                                <li><a href="../results/index.html">Ex-413</a></li><li><a href="../results/index.html">EX-236</a></li><li><a href="../results/index.html">EX210 (openstack cloud)</a></li><li><a href="../results/index.html"></a></li><li><a href="../results/index.html">RHCE </a></li><li><a href="../results/index.html">RHCSA </a></li>
+
+
+                              </ul>
+
+
+
+                            </div>
+
+
+
+                            <div class="dropdown_content student_menu"> <a href="../exam-dates/index.html" >
+
+
+
+                              <h2> Exam Dates</h2>
+
+
+
+                              </a> 
+
+
+
+                              <!--<p>
+
+
+
+<strong>Jaipur1</strong><br>
+
+
+
+
+
+
+
+SCJP : 12 May, 15 Nov<br>
+
+
+
+
+
+
+
+RHCE : 12 Aug<br>
+
+
+
+
+
+
+
+<strong>Nagpur</strong><br>
+
+
+
+
+
+
+
+SCJP : 14 Aug<br>
+
+
+
+
+
+
+
+<strong>Pune</strong><br>
+
+
+
+
+
+
+
+JAVA : 25 Oct<br>
+
+
+
+
+
+
+
+<strong>Indore</strong><br>
+
+
+
+
+
+
+
+PHP : 15 Nov<br>
+
+
+
+
+
+
+
+<strong>Sikar</strong><br>
+
+
+
+
+
+
+
+ORACLE : 01 Dec
+
+
+
+                        </p>-->
+
+
+
+                              <p>
+
+
+
+                                <a href="../exam-dates/1/index.html"><strong>Jaipur</strong></a><a href="../exam-dates/2/index.html"><strong>Nagpur</strong></a><a href="../exam-dates/3/index.html"><strong>Pune</strong></a><a href="../exam-dates/4/index.html"><strong>Ahmedabad</strong></a><a href="../exam-dates/5/index.html"><strong>Gurgaon</strong></a>
+
+
+                              </p>
+
+
+
+                            </div>
+
+
+
+                            <div class="dropdown_content student_menu">
+
+
+
+                              <h2>Other</h2>
+
+
+
+                              <ul>
+
+
+
+                                <li><a href="../new-batches/index.html">New Batches</a></li>
+
+
+
+                                <li><a href="../testimonials/write-testimonial/index.html">Write Testimonials</a></li>
+
+
+
+                                <li><a href="../redhat-offers/index.html">Redhat Exam Offers</a></li>
+
+
+
+                                <li><a href="../news-events/index.html">Announcements/ News </a></li>
+
+
+
+                                <li><a href="javascript:void(0);">Student Of Month</a></li>
+
+
+
+                                <li><a href="javascript:void(0);">Alumni Network</a></li>
+
+
+
+                              </ul>
+
+
+
+                            </div>
+
+
+
+                          </div>
+
+
+
+                        </li>
+
+
+
+                      </ul>
+
+
+
+                    </li>
+
+
+
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Career <b class="caret"></b></a>
+
+
+
+                      <ul class="dropdown-menu career_panel">
+
+
+
+                        <li>
+
+
+
+                          <div class="dropdown_navigation">
+
+
+
+                            <div class="dropdown_content training_menu">
+
+
+
+                              <ul>
+
+
+
+                                <li><a href="../career/job-openings/index.html">Job Openings</a></li>
+								
+								
+
+
+
+                                <li><a href="../career/job-openings/apply-for-job/index.html">Apply for Jobs</a></li>
+
+
+
+                                <li><a href="../career/placed-students/index.html">Placed Students</a></li>
+
+
+
+                                <li><a href="../career/upcomming-recruitments/index.html">Upcoming Recruitments</a></li>
+
+
+
+                                <li><a href="../career/shortlisted/index.html">Recruitment Results</a></li>
+
+
+
+                              </ul>
+
+
+
+                            </div>
+
+
+
+                          </div>
+
+
+
+                        </li>
+
+
+
+                      </ul>
+
+
+
+                    </li>
+
+
+
+                    <li class="dropdown"> <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact us <b class="caret"></b></a>
+
+
+
+                      <ul class="dropdown-menu contact_panel">
+
+
+
+                        <li>
+
+
+
+                          <div class="dropdown_navigation">
+
+
+
+                            <div class="dropdown_content contact_menu">
+
+
+
+                              <ul>
+
+
+
+                                <li><a href="../jaipur-contact/index.html">Jaipur</a></li>                               
+
+
+
+                                <li><a href="../contact-nagpur/index.html">Nagpur</a></li>
+
+
+
+								<li><a href="../contact-pune/index.html">Pune</a></li>
+
+<li><a href="../contact-ahmedabad/index.html">Ahmedabad</a></li>
+<li><a href="../contact-gurgaon/index.html">Gurgaon</a></li>
+
+
+
+                              </ul>
+
+
+
+                            </div>
+
+
+
+                          </div>
+
+
+
+                        </li>
+
+
+
+                      </ul>
+
+
+
+                    </li>
+
+
+
+                  </ul>
+
+
+
+                </div>
+
+
+
+                <!-- /.navbar-collapse --> 
+
+
+
+              </nav>
+
+
+
+            </div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </div>
+
+
+
+</header>
+
+
+
+<div id="main" class="site-main">
+<section> 
+  
+  <!--About Us Start Here-->
+  <div class="container">
+    <div class="row">
+      <section>
+	  
+	  	<div class="col-lg-3 col-sm-3">
+
+
+
+          <article>
+
+
+
+            <div class="left_part">
+
+
+
+              <div class="sidebar">
+
+
+
+               <!-- <ul>
+
+
+
+                  <li><a href="#">RedHat System Adminstration</a></li>
+
+
+
+                  <li><a href="#">RedHat System Adminstration</a></li>
+
+
+
+                  <li><a href="#">RedHat System Adminstration</a></li>
+
+
+
+                  <li><a href="#">RedHat System Adminstration</a></li>
+
+
+
+                  <li><a href="#">RedHat System Adminstration</a></li>
+
+
+
+                  <li><a href="#">RedHat System Adminstration</a></li>
+
+
+
+                  <li><a href="#">RedHat System Adminstration</a></li>
+
+
+
+                </ul>-->
+
+
+
+                
+
+
+
+				<!-- sidebar menu -->
+
+
+
+				<!--<div class="panel-group" id="accordion">
+
+
+
+				  <div class="panel panel-default">
+
+
+
+					<div class="panel-heading">
+
+
+
+					  <h4 class="panel-title">
+
+
+
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+
+
+
+						 RedHat Linux Securities
+
+
+
+						</a>
+
+
+
+					  </h4>
+
+
+
+					</div>
+
+
+
+					<div id="collapseOne" class="panel-collapse collapse in">
+
+
+
+					  <div class="panel-body">
+
+
+
+							<ul>
+
+
+
+								<li><a href="/?page_id=50">Expertise in Network Services (RHS333)</a></li>
+
+
+
+								<li><a href="/?page_id=52">Expertise in Directory Server &amp; Authentication (RHS423)</a></li>
+
+
+
+								<li><a href="/?page_id=54">Expertise in SELinux (RHS429)</a></li>
+
+
+
+							</ul>
+
+
+
+					  </div>
+
+
+
+					</div>
+
+
+
+				  </div>
+
+
+
+				  <div class="panel panel-default">
+
+
+
+					<div class="panel-heading">
+
+
+
+					  <h4 class="panel-title">
+
+
+
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">
+
+
+
+						  Collapsible Group Item #2
+
+
+
+						</a>
+
+
+
+					  </h4>
+
+
+
+					</div>
+
+
+
+					<div id="collapseTwo" class="panel-collapse collapse">
+
+
+
+					  <div class="panel-body">
+
+
+
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+
+
+					  </div>
+
+
+
+					</div>
+
+
+
+				  </div>
+
+
+
+				  <div class="panel panel-default">
+
+
+
+					<div class="panel-heading">
+
+
+
+					  <h4 class="panel-title">
+
+
+
+						<a data-toggle="collapse" data-parent="#accordion" href="#collapseThree">
+
+
+
+						  Collapsible Group Item #3
+
+
+
+						</a>
+
+
+
+					  </h4>
+
+
+
+					</div>
+
+
+
+					<div id="collapseThree" class="panel-collapse collapse">
+
+
+
+					  <div class="panel-body">
+
+
+
+						Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+
+
+
+					  </div>
+
+
+
+					</div>
+
+
+
+				  </div>
+
+
+
+				</div>-->
+
+
+
+				
+
+
+
+				<!-- end sidebar menu -->
+
+
+
+			  
+
+
+
+				
+
+
+
+			  
+
+
+
+			  
+
+
+
+			  
+
+
+		<h3 class="according-menu-title" style="text-transform:capitalize;">contact us</h3>
+
+
+
+		
+
+
+		
+
+
+
+		<div id="accordion" class="panel-group">
+
+
+
+			
+
+
+
+					
+
+
+
+	<!-- hard Coded -->				
+
+
+
+		<div class="panel panel-default">
+
+
+
+			<div class="panel-heading">
+
+
+
+			  <h4 class="panel-title">
+
+
+
+				<a data-toggle="collapse" data-parent="#accordion" href="#collapse1">Jaipur</a>
+
+
+
+			  </h4>
+
+
+
+			</div>
+
+
+
+			<div id="collapse1" class="panel-collapse '.$class_collapse.'">
+
+
+
+			  <div class="panel-body">
+
+
+
+					<ul>						
+
+
+
+						<li class=""><a href="../jaipur-contact">Head Office</a></li>
+
+
+
+						<li class=""><a href="../jaipur-lalkhoti">Lal Kothi</a></li>
+
+
+
+						
+
+
+
+					</ul>
+
+
+
+			  </div>
+
+
+
+			</div>
+
+
+
+		  </div>
+
+
+
+			
+
+
+
+		<ul>
+
+
+
+			<li class=""><a href="../contact-nagpur" class="'.$active.'">Nagpur</a></li>
+
+
+
+			<li class=""><a href="../contact-pune" class="'.$active.'">Pune</a></li>
+
+
+
+<li class=""><a href="../contact-ahmedabad" class="'.$active.'">Ahmedabad</a></li>
+
+<li class=""><a href="../contact-gurgaon" class="'.$active.'">Gurgaon</a></li>
+
+
+
+		</ul>
+
+
+
+	
+
+
+
+		</div><!-- end  div id="accordion2"-->
+
+
+
+	<!-- end hard Coded -->		
+
+
+
+		
+
+
+
+		
+
+
+
+
+
+
+
+
+
+
+				<!--<div class="sidebar_fix">
+
+
+
+                  <div class="reviews_banner sprite">Student's Reviews</div>
+
+
+
+                  <div class="dates_banner sprite">Exam Dates</div>
+
+
+
+                </div>-->
+
+
+
+              </div>
+
+
+
+			  	
+
+
+
+            </div>
+
+
+
+          </article>
+
+
+
+        </div>
+
+
+
+		
+
+
+
+		
+
+
+
+			  	
+		 <div class="col-lg-9 col-sm-9">
+          <aside class="right_part">
+            <div class="listing_top">            
+			  
+			  <!-- breadcrumb -->
+			  <div class="breadcrumbs">
+					<!-- Breadcrumb NavXT 5.2.2 -->
+<a title="Go to grras." href="../index.html" class="home">Home</a> &raquo; contact us				</div>
+			 <!-- end breadcrumb -->
+			  
+            </div>
+            <h2></h2>
+			
+			            
+						
+			
+													<p><h3>Contact Jaipur</h3>
+<p><strong>Head Office :</strong><br />
+<b>GRRAS Linux Training and Development Center</b><br />
+219, Himmat Nagar, Behind Kiran Sweets<br />
+Gopalpura Turn, Tonk Road, Jaipur (Raj.)<br />
+<strong>Contact No. :</strong>?09001997175,09983340133<br />
+<strong>Email :</strong>?<a href="mailto:info@grras.com">info@grras.com</a><br />
+Or fill this form <a style="color: #009;" href="../jaipur-contact/index.html">Click here</a></p>
+<p><strong>GRRAS Linux Training and Development Cente</strong>r<br />
+E-788-789, Avadpuri, Gandhinagar Turn, Jaipur(Raj.)<br />
+Tel: +91- 9785598711, +91-9828078180<br />
+Email:?<a href="mailto:info.lalkothi@grras.com">info.lalkothi@grras.com</a><br />
+Or fill this form?<a href="../jaipur-contact/index.html">Click here</a></p>
+<header>
+<h3>Contact Nagpur</h3>
+</header>
+<div>
+<p><b>GRRAS Linux Training and Development Center</b><br />
+53 Gokulpeth, Suvrna Building,<br />
+Opp. Ram Nagar Bus Stand and Karnatka sangh Building,<br />
+Ram Nagar Square, Nagpur- 440010<br />
+<strong>Phone:</strong>0712-3224935<br />
+<strong>M:</strong>?+919975998226<br />
+<strong>Email:</strong>?<a href="mailto:info.nagpur@grras.com">info.nagpur@grras.com</a><br />
+Or fill this form <a style="color: #009;" href="../contact-nagpur/index.html">Click here</a></p>
+<header>
+<h3>Contact Pune</h3>
+</header>
+<div>
+<p><b>GRRAS Linux Training and Development Center</b><br />
+18, Sarvadarshan, Nal-stop, karve Road,<br />
+Opposite Sarswat-co-op Bank, Pune 411004<br />
+<strong>M:</strong>?+918806017175<br />
+<strong>Email:</strong>?<a href="mailto:info.pune@grras.com">info.pune@grras.com</a><br />
+Or fill this form <a style="color: #009;" href="../contact-pune/index.html">Click here</a></p>
+</div>
+<header>
+<h3>Contact Ahmedabad</h3>
+</header>
+<div>
+<p><b>GRRAS Solutions Pvt. Ltd.</b><br />
+S/F &#8211; 1, Block &#8211; A, Stadium House,<br />
+Stadium Circle, Navrangpura,<br />
+Near Das Khaman ( Landmark )<br />
+CG Road, Ahmedabad &#8211; 380009, Gujrat<br />
+<strong>M:</strong>?+91-8140195075, +91-9001997180<br />
+<strong>Email:</strong>?<a href="mailto:info.amd@grras.com">info.amd@grras.com </a></p>
+</div>
+<header>
+<h3>Contact Gurgaon</h3>
+</header>
+<div>
+<p><b>GRRAS Solutions Pvt. Ltd.</b><br />
+SCO 46, 2nd Floor,<br />
+(Above Subway Food Outlet) , Near OM Sweets,<br />
+Main Market, Sector 31,Gurgaon &#8211; 122002<br />
+<strong>M:</strong> 0999-920-1478,0124-4268131<br />
+<strong>Email:</strong> info.gurgaon@grras.com</p>
+</div>
+</div>
+</p>
+												
+		
+						<p></p>
+			
+          </aside>
+        </div>
+		
+	  </section>
+    </div>
+  </div>  
+  <!--About us End Here-->
+</section> 
+
+
+
+
+
+
+
+
+		<footer id="footer_wrapper">
+
+
+
+    <div class="container">
+
+
+
+      <div class="row">
+
+
+
+        <div class="col-sm-9 col-xs-12">
+
+
+
+          <div class="footer_links">
+
+
+
+            <ul>
+
+
+
+              <h2>Explore GRRAS</h2>
+
+
+
+              <li><a href="../index.html" target="_blank">Grras.com</a></li>
+
+
+
+              <li><a href="http://www.grrasonlinetraining.com/" target="_blank">Grras Online Training</a></li>	
+
+
+
+              <li><a href="http://www.grrassolutions.com/" target="_blank">Grras Solutions</a></li>
+
+
+
+            </ul>
+
+
+
+            <ul>
+
+
+
+              <h2>Quick Links</h2>
+
+
+
+              <li><a href="../corporate-training/index.html">Corporate Training</a></li>
+
+
+
+              <li><a href="../summer-industrial-training/index.html">Summer Training</a></li>
+
+
+
+              <li><a href="../training/online-training/index.html">Online Training</a></li>
+
+
+
+
+
+
+
+              <li><a href="index.html">Contact Us</a></li>
+
+
+
+            </ul>
+
+
+
+            <!--<ul>
+
+
+
+              <li>Courses</li>
+
+
+
+              <li><a href="#">RedHat Linux Administration</a></li>
+
+
+
+              <li><a href="#">RedHat Linux Securities</a></li>
+
+
+
+              <li><a href="#">Cisco Networking</a></li>
+
+
+
+              <li><a href="#">Software Courses</a></li>
+
+
+
+              <li><a href="#">Certification</a></li>
+
+
+
+            </ul>
+
+
+
+-->
+
+
+
+			<ul class="last" style="border-right:#999 solid 1px;">
+
+
+
+              <h2>Recent Posts</h2>
+
+
+
+            	<li><a href="../nomination-2016-has-been-started-for-the-contribution-of-women-in-opensource/index.html" title="Look Nomination 2016 has been started for the contribution of women in open source" >Nomination 2016 has been started for the contribution of women in open source</a> </li> <li><a href="../redhat-acquire-it-automation-tool-ansible/index.html" title="Look Redhat acquire IT automation tool-Ansible" >Redhat acquire IT automation tool-Ansible</a> </li> <li><a href="../corporate-training-new/index.html" title="Look corporate training new" >corporate training new</a> </li> 
+
+
+			</ul>
+
+
+
+			
+
+
+
+			  
+
+
+
+			
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <div class="col-sm-3 col-xs-12">
+
+
+
+          <div class="news_letter pull-right">
+
+
+
+            <h2>News letter Sign Up</h2>
+
+
+
+            <h3>Get updates of courses and latest features</h3>
+
+
+
+			<div id="newsletter_msg"></div>
+
+<div class="widget_wysija_cont shortcode_wysija"><div id="msg-form-wysija-shortcode56cae932b1ddc-2" class="wysija-msg ajax"></div><form id="form-wysija-shortcode56cae932b1ddc-2" method="post" action="#wysija" class="widget_wysija shortcode_wysija">
+<p class="wysija-paragraph">
+    <label>Email <span class="wysija-required">*</span></label>
+    
+    	<input type="text" name="wysija[user][email]" class="wysija-input validate[required,custom[email]]" title="Email"  value="" />
+    
+    
+    
+    <span class="abs-req">
+        <input type="text" name="wysija[user][abs][email]" class="wysija-input validated[abs][email]" value="" />
+    </span>
+    
+</p>
+<input class="wysija-submit wysija-submit-field" type="submit" value="Subscribe" />
+
+    <input type="hidden" name="form_id" value="2" />
+    <input type="hidden" name="action" value="save" />
+    <input type="hidden" name="controller" value="subscribers" />
+    <input type="hidden" value="1" name="wysija-page" />
+
+    
+        <input type="hidden" name="wysija[user_list][list_ids]" value="1" />
+    
+ </form></div>
+				
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+      <div class="row">
+
+
+
+        <div class="col-sm-4">
+
+
+
+          <div class="about_grras">
+
+
+
+            <img src="http://www.grras.com/wp-content/themes/my_theme/images/logo_footer.png" alt="" /> 
+
+
+
+            <p>GRRAS is a well-known Linux training institute and an authorized Linux training partner of Red Hat.</p>
+
+
+
+            
+
+
+
+            
+
+
+
+            <!--<div id="photogallery">
+
+
+
+			  <ul style="list-style:none; margin:0; padding:0;">
+
+
+
+					<li><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392621989_298870_311016792258293_100000499232083_1294740_1949278622_n.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392621989_300142_311019308924708_100000499232083_1294798_1465696349_n.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392621989_302498_233330796731450_100001635932499_682236_1307910925_n.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392621989_309673_311015928925046_100000499232083_1294701_946010135_n.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392621989_316861_311019332258039_100000499232083_1294799_753233426_n.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392624207_lab-1_1.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a></li><li><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392624207_lab1_2.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392624207_lab1_3.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392624207_lab1_4.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392624207_lab1_5.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392628049_37.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392628049_40.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a></li><li><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392628049_49.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392628049_52.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392628843_44.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392628843_45.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392628843_02.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1392628843_41.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a></li><li><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103224_IMG-20140808-WA0023.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103224_IMG-20140808-WA0025.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103224_IMG-20140808-WA0026.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103224_IMG-20140808-WA0029.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103224_IMG-20140808-WA0030.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103406_IMG-20140808-WA0030.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a></li><li><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103406_IMG-20140808-WA0031.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103406_IMG-20140808-WA0033.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103406_IMG-20140808-WA0035.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1408103406_IMG-20140808-WA0036.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410523675_IMG-20140912-WA0019.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410523676_IMG-20140912-WA0024.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a></li><li><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410523676_IMG-20140912-WA0031.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410523676_IMG-20140912-WA0039.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410523676_IMG-20140912-WA0034.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410523700_IMG-20140912-WA0040.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410528368_20140912_125038.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410528368_20140912_125201.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a></li><li><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410528368_20140912_161501.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410528368_20140912_161539.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410528368_20140912_161655.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410528426_20140912_161710.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410528426_20140912_161831.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410528426_20140912_161841.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a></li><li><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1410528426_20140912_161943.jpg" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1425730045_2.JPG" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1425730045_4.JPG" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1425730045_17.JPG" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1425730045_16.JPG" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a><a href="http://www.grras.com/photo-gallery"><img alt="" src="http://www.grras.com/wp-content/themes/my_theme/uploads/1425730045_6.JPG" style="height:42px; width:66px; border: 1px solid #FFFFFF;margin: 2px;"></a></li>
+
+
+				</ul>
+
+
+
+			</div>-->
+
+
+
+			
+
+
+
+           <!-- <ul>
+
+
+
+              <li><a href="#"><img src="http://www.grras.com/wp-content/themes/my_theme/images/gallery01.jpg" alt=""></a></li>
+
+
+
+              <li><a href="#"><img src="http://www.grras.com/wp-content/themes/my_theme/images/gallery01.jpg" alt=""></a></li>
+
+
+
+              <li><a href="#"><img src="http://www.grras.com/wp-content/themes/my_theme/images/gallery01.jpg" alt=""></a></li>
+
+
+
+              <li><a href="#"><img src="http://www.grras.com/wp-content/themes/my_theme/images/gallery01.jpg" alt=""></a></li>
+
+
+
+              <li><a href="#"><img src="http://www.grras.com/wp-content/themes/my_theme/images/gallery01.jpg" alt=""></a></li>
+
+
+
+              <li><a href="#"><img src="http://www.grras.com/wp-content/themes/my_theme/images/gallery01.jpg" alt=""></a></li>
+
+
+
+            </ul>-->
+
+
+
+            
+
+
+
+          </div>
+
+
+
+          <div class="copy_right">Copyright &copy; 2015 GRRAS. All rights reserved.</div>
+
+
+
+        </div>
+
+
+
+        <div class="col-sm-4 ">
+
+
+
+          <div class="office_address">
+
+
+
+            <h2>Our Presence At</h2>
+
+
+
+            <ul>
+
+
+
+              <li><a href="index681a.html?id=1">jaipur</a></li>
+
+
+
+              <li><a href="indexd61c.html?id=5">pune</a></li>
+
+
+
+              <li><a href="indexdcfd.html?id=4">nagpur</a></li>
+
+ 	<li><a href="indexdcfd.html?id=4">Ahmedabad</a></li>
+<li><a href="index8803.html?id=7">Gurgaon</a></li>
+
+
+
+            </ul>
+
+
+
+            <p>Head Office :
+
+
+
+              219, Himmat Nagar, Behind Kiran Sweets<br>
+
+
+
+              Gopalpura Turn,  Tonk Road,  Jaipur (Raj.)<br>
+
+
+
+              Contact No. : 09983340133<br />
+
+
+
+              Email : <a href="#">info@grras.com</a> <br />
+
+
+
+</p>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+        <div class="col-sm-4 ">
+
+
+
+          <div class="social_icons_box">
+
+
+
+            <h2>Join Our Social Network</h2>
+
+
+
+            <ul>
+
+
+
+              <li><a class=" sprite facebook" href="https://www.facebook.com/grras" target="_blank">Facebook</a></li>
+
+
+
+              <li><a class=" sprite twitter" href="https://twitter.com/grras" target="_blank">Facebook</a></li>
+
+
+
+              <li><a class=" sprite linkedin" href="http://www.linkedin.com/company/grras" target="_blank">Facebook</a></li>
+
+
+
+              <li><a class=" sprite youtube" href="#" target="_blank">Facebook</a></li>
+
+
+
+            </ul>
+
+
+
+          </div>
+
+
+
+          <div class="clearfix"></div>
+
+
+
+          <div class="search_box">
+
+
+
+			<form role="search" method="get" class="search-form" action="http://www.grras.com/">
+				<label>
+					<span class="screen-reader-text">Search for:</span>
+					<input type="search" class="search-field" placeholder="Search &hellip;" value="" name="s" title="Search for:" />
+				</label>
+				<input type="submit" class="search-submit" value="Search" />
+			</form>
+
+
+            <!--<input name="" type="text" placeholder="Search">-->
+
+
+
+            <div class=" sprite search_icon"></div>
+
+
+
+          </div>
+
+
+
+        </div>
+
+
+
+      </div>
+
+
+
+    </div>
+
+
+
+  </footer>
+
+
+
+  
+
+
+
+  <!-- Quick Contact Form -->
+
+
+
+  <script src="http://www.grras.com/wp-content/themes/my_theme/captcha/captcha.js"></script>
+
+
+
+
+
+
+
+<div class="sidebar_contact">	
+
+
+
+	<!--<div class="quick_contact">
+
+
+
+		<div id="quick_contact_response"></div>
+
+
+
+        <h2 class="white_text">Quick Enquiry</h2>
+
+
+
+		
+
+
+	</div>-->
+
+
+
+	<!--<div class="show_hide_link">
+
+
+
+		<input class="green_btn" type="button" id="left" value=""/>
+
+
+
+		<input class="green_btn" type="button" id="right" value=""/>
+
+
+
+	</div>-->
+
+
+
+
+
+
+
+</div>
+
+
+
+  <script>
+
+
+
+$(document).ready(function(){
+
+
+
+
+
+
+
+	//$('#left').hide();
+
+
+
+	
+
+
+
+	$("#right").click(function() {
+
+
+
+		$('#right').hide();
+
+
+
+		$('#left').show();
+
+
+
+		$(".quick_contact").animate(
+
+
+
+				{"left": "0px"},
+
+
+
+				"slow");
+
+
+
+				
+
+
+
+		$(".show_hide_link").animate({"left": "200px"},"slow");		
+
+
+
+				
+
+
+
+	});
+
+
+
+	$("#left").click(function() {
+
+
+
+	
+
+
+
+		$('#quick_contact_response').html('');
+
+
+
+		$('#left').hide();
+
+
+
+		$('#right').show();
+
+
+
+		$(".quick_contact").animate(
+
+
+
+				{"left": "-200px"},
+
+
+
+				"slow");
+
+
+
+		$(".show_hide_link").animate({"left": "0px"},"slow");					
+
+
+
+	});
+
+
+
+});     
+
+
+
+</script>
+
+
+
+  <!-- End Quick Contact Form -->
+
+
+
+  
+
+
+
+  <div id="back-top"><a href="#header_wrapper"></a></div>
+
+
+
+
+<script type="text/javascript" charset="utf-8">
+    jQuery(document).ready(function() {
+    jQuery("a[rel^='prettyPhoto']").prettyPhoto({
+	    deeplinking: false,
+	    });
+    });
+</script><script type='text/javascript' src='http://www.grras.com/wp-content/plugins/contact-form-7/includes/js/jquery.form.min.js?ver=3.51.0-2014.06.20'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var _wpcf7 = {"loaderUrl":"http:\/\/www.grras.com\/wp-content\/plugins\/contact-form-7\/images\/ajax-loader.gif","sending":"Sending ...","cached":"1"};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.grras.com/wp-content/plugins/contact-form-7/includes/js/scripts.js?ver=4.3'></script>
+<script type='text/javascript' src='http://www.grras.com/wp-includes/js/comment-reply.min.js?ver=4.3.3'></script>
+<script type='text/javascript' src='http://www.grras.com/wp-includes/js/masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://www.grras.com/wp-includes/js/jquery/jquery.masonry.min.js?ver=3.1.2'></script>
+<script type='text/javascript' src='http://www.grras.com/wp-content/themes/my_theme/js/functions.js?ver=2013-07-18'></script>
+<script type='text/javascript' src='http://www.grras.com/wp-content/plugins/wysija-newsletters/js/validate/languages/jquery.validationEngine-en.js?ver=2.6.17'></script>
+<script type='text/javascript' src='http://www.grras.com/wp-content/plugins/wysija-newsletters/js/validate/jquery.validationEngine.js?ver=2.6.17'></script>
+<script type='text/javascript'>
+/* <![CDATA[ */
+var wysijaAJAX = {"action":"wysija_ajax","controller":"subscribers","ajaxurl":"http:\/\/www.grras.com\/wp-admin\/admin-ajax.php","loadingTrans":"Loading...","is_rtl":""};
+/* ]]> */
+</script>
+<script type='text/javascript' src='http://www.grras.com/wp-content/plugins/wysija-newsletters/js/front-subscribers.js?ver=2.6.17'></script>
+
+
+</body>
+
+
+
+
+<!-- Mirrored from www.grras.com/contact-us/?id=2 by HTTrack Website Copier/3.x [XR&CO'2014], Tue, 23 Feb 2016 01:28:49 GMT -->
+</html>
+<!-- Performance optimized by W3 Total Cache. Learn more: http://www.w3-edge.com/wordpress-plugins/
+
+Page Caching using disk: enhanced (Requested URI contains query)
+
+ Served from: www.grras.com @ 2016-02-22 10:55:46 by W3 Total Cache -->
